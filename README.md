@@ -22,7 +22,18 @@ To install it, clone the git repo and install it with the setup.py file:
 python setup.py install
 ```
 
- 
+## Redirect packets to OSC
+If you want to use the LiveLink Face app for OSC-based input devices, you can run the examples/live_link_redirect_osc.py script as a service. It listens to LiveLink Face app packets, converts the data into OSC bundle messages, and sends OSC packets on port 9000.
+
+The OSC messages follow the FaceCap format, as described here: https://www.bannaflak.com/face-cap/livemode.html.
+
+There is an additional dependency required to make it work.
+ <ul>
+  <li>python-osc</li>
+ </ul>
+
+ MotionBuilder device to read OSC packets live in OpenMobu repository - https://github.com/Neill3d/OpenMoBu
+
 ## Usage
 
 The default LiveLinkFace App works with UDP sockets on the Port 11111. You need to open an UDP-Socket for sending or receiving the data. For example files, see the [examples folder](examples)
