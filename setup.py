@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='PyLiveLinkFace',
@@ -13,5 +12,6 @@ setup(
     install_requires=[
         'numpy',
         'timecode'
-    ]
+    ],
+    python_requires='>=3.6',
 )
